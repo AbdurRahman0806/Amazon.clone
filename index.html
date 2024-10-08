@@ -12,6 +12,10 @@
     <div class="warning">
         Screen Size To Small Minimum Width 790px
         Or Change Orientation To Landscape Mode
+        <audio id="responsive-audio" autoplay loop>
+            <source src="/Images/Warn.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
     </div>
 
     <header>
@@ -280,6 +284,30 @@
         </div>
 
     </footer>
+
+<!-- <--------audio--------> -->
+
+<script>
+    const audio = document.getElementById('responsive-audio');
+    const mediaQuery = window.matchMedia("(max-width: 790px)");
+  
+    function handleMediaChange(e) {
+      if (e.matches) {
+        // If the viewport is 790px or less, play the audio
+        audio.play();
+      } else {
+        // If the viewport is more than 790px, pause the audio
+        audio.pause();
+        audio.currentTime = 0; // Reset audio to start
+      }
+    }
+  
+    // Initial check
+    handleMediaChange(mediaQuery);
+  
+    // Add listener for changes
+    mediaQuery.addListener(handleMediaChange);
+  </script>
 
 </body>
 </html>

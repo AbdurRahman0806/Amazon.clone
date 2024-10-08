@@ -353,9 +353,9 @@ ul a{
 
 @media screen and (max-width: 790px){
     *{
-        background: red;
+        animation: warn 0.3s linear infinite;
     }
-    
+        
     header{
         display: none;
     }
@@ -376,10 +376,18 @@ ul a{
         display: inline;
         Height: 100%;
         Width: 790px;
-        background-color: red;
         color: white;
         text-align: center;
         font-size: 40px;
         font-weight: 800;
+    }
+
+    @keyframes warn {
+        from {
+            background-color: red;
+        }
+    to {
+        background-color: blue;
+        }
     }
 }
