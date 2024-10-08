@@ -344,3 +344,42 @@ ul a{
     align-items: center;
     padding-bottom: 20px;
 }
+
+@media screen and (min-width: 790px) {
+    .warning{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 790px){
+    *{
+        background: red;
+    }
+    
+    header{
+        display: none;
+    }
+
+    footer{
+        display: none;
+    }
+
+    .hero-main{
+        display: none;
+    }
+
+    .shop-main{
+        display: none;
+    }
+
+    .warning{
+        display: inline;
+        Height: 100%;
+        Width: 790px;
+        background-color: red;
+        color: white;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 800;
+    }
+}
